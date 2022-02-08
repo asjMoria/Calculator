@@ -11,8 +11,24 @@ public class Calculator
 		int opand1 = scanner.nextInt();
 		System.out.println("2:");
 		int opand2 = scanner.nextInt();
-		int result = opand1 + opand2;
+		System.out.println("Would you like to add (+) or subtract (-) these two numbers? (please enter either the '+' or '-' symbol)");
+		
+		Scanner scan = new Scanner(System.in);
+		//This is completely intentional, code will not work if I use the same Scanner
+		String opor = scan.nextLine();
+		
+		int result = 0;
+		
+		if (opor.equals("+"))
+		{
+			result = opand1 + opand2;
+		}
+		else
+		{
+			result = opand1 - opand2;
+		}
 		
 		System.out.println("Your answer is: " + result + "!");
+
 	}
 }
