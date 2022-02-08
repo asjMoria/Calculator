@@ -18,6 +18,7 @@ public class Calculator
 		String opor = scan.nextLine();
 		
 		double result = 0;
+		boolean divByZero = false;
 		
 		if (opor.equals("+"))
 		{
@@ -33,10 +34,23 @@ public class Calculator
 		}
 		else
 		{
-			result = opand1 / opand2;
+			if (opand2 == 0)
+			{
+				divByZero = true;
+			}
+			else
+			{
+				result = opand1 / opand2;
+			}
 		}
 		
-		System.out.println("Your answer is: " + result + "!");
-
+		if (divByZero)
+		{
+			System.out.println("Error: Divide by Zero");
+		}
+		else
+		{
+			System.out.println("Your answer is: " + result + "!");
+		}
 	}
 }
