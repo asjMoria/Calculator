@@ -6,18 +6,18 @@ public class Calculator
 	{
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("Please enter two whole numbers (ints).");
+		System.out.println("Please enter two numbers.");
 		System.out.println("1:");
-		int opand1 = scanner.nextInt();
+		double opand1 = scanner.nextDouble();
 		System.out.println("2:");
-		int opand2 = scanner.nextInt();
+		double opand2 = scanner.nextDouble();
 		System.out.println("Would you like to add (+), subtract (-), multiply (*) or divide (/) these two numbers? (please enter either the corresponding symbol)");
 		
 		Scanner scan = new Scanner(System.in);
 		//This is completely intentional, code will not work if I use the same Scanner
 		String opor = scan.nextLine();
 		
-		int result = 0;
+		double result = 0;
 		
 		if (opor.equals("+"))
 		{
